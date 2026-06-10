@@ -16,5 +16,5 @@ Logistic Regression: accuracy = 91%; f1-score dla 0 = 0.95; dla 1 = 0.20 -> mode
 Logistic Regression z class_weight='balanced' (model będzie bardziej zwracał uwagę na 1): accuracy = 75%; f1-score dla 0 = 0.85; dla 1 = 0.38 -> znajduje więcej chorych, ale dokładność spadła.
 Random Forest: accuracy = 90%; f1-score dla 0 = 0.95; dla 1 = 0.17 -> znowu model potrafi odnajdować tylko ludzi zdrowych.
 Random Forest z class_weight='balanced': accuracy = 90%; f1-score dla 0 = 0.95; dla 1 = 0.15 (precision i recall też spadło) -> class_weight='balanced' tym razem nie polepszyło predykcji modelu.
-Ze względu na najlepszy wynik przy użyciu Logistic Regression z class_weight='balanced' dla tego modelu szukam najleszych parametrów = {'C': 0.01}. F1-score dla 0 i 1 wyszedł taki sam jak w przypadku Logistic Regression z class_weight='balanced'. 
+Ze względu na najlepszy wynik przy użyciu Logistic Regression z class_weight='balanced' dla tego modelu szukam najleszych parametrów (GridSearchCV) = {'C': 0.01}. F1-score dla 0 i 1 wyszedł taki sam jak w przypadku Logistic Regression z class_weight='balanced'. 
 Z tych dwóch modeli lepszy okazał się Logistic Regression, jednak żaden nie potrafił ze skutecznością przewidzieć choroby serca lub zawału, być może ze względu na dużą przewagę w bazie osób zdrowych (91%) i niewielką ilość osób chorych (9%).
